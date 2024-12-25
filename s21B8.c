@@ -13,11 +13,9 @@ int main() {
     int count = 0;
     fptr = fopen("students.txt", "r");
     while (fgets(line, sizeof(line), fptr) != EOF){
-        if (line, "%d,%s,%d", &sv[count].id, sv[count].name, &sv[count].age!){
+    	int result= fscanf(fptr, "%d,%s,%d", &sv[count].id, sv[count].name, &sv[count].age );
+		 //(line, "%d,%s,%d", &sv[count].id, sv[count].name, &sv[count].age )
             count++;
-            if (count > 100) {
-                break;
-            }
         }
     }
     fclose(fptr);
